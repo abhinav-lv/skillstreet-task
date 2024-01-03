@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  node_app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      NODE_ENV: development
+      MONGODB_URI: mongodb://mongo_db:27017
+    depends_on:
+      - mongo_db
+    restart: unless-stopped
+
+  mongo_db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodata:/mongo/data/db
+volumes:
+  mongodata:
