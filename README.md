@@ -60,7 +60,7 @@ If you have Docker installed on your system, this process is a lot easier. All y
 
   ```json
   {
-    "id": "asdfasdfa", // should be actual id of a note
+    "id": "asdfasdfa",
     "title": "title1"
   }
   ```
@@ -74,7 +74,7 @@ If you have Docker installed on your system, this process is a lot easier. All y
   }
   ```
 
-  - **Get a note or all notes:**
+- **Get a note or all notes:**
 
   ```
   GET http://localhost:8080/note/get?id=asdfasdf
